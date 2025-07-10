@@ -1,0 +1,24 @@
+workflows:
+  cordova-workflow:
+    name: Build Bird Game Cordova App
+    instance_type: mac_mini
+    environment:
+      vars:
+        CORDOVA_PLATFORM: ios
+      node: 14.17.0
+    scripts:
+      - name: Install Cordova
+        script: |
+          npm install -g cordova
+      - name: Install project dependencies
+        script: |
+          npm install
+      - name: Add Cordova platform
+        script: |
+          cordova platform add $CORDOVA_PLATFORM
+      - name: Build the Cordova app
+        script: |
+          cordova build $CORDOVA_PLATFORM
+    artifacts:
+      - platforms/**/build/**/*.ipa
+      - platforms/**/build/**/*.apk
