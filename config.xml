@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.birdgame" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>BirdGame</name>
+  <description>Simple Bird Catching Game</description>
+  <author email="you@example.com">Your Name</author>
+  <content src="index.html" />
+  <preference name="viewport-scale" value="true" />
+  <platform name="ios" />
+  <platform name="android" />
+</widget>
